@@ -17,7 +17,7 @@ class.
 Downloads and requirements
 ==========================
 
-To download the software, please go to `github_link_to_be_added`.
+To download the software, please go to https://github.com/hasan3e8/AlphaDAWG.
 
 We will need `python` and `R` and `matlab` for different parts of the
 project.
