@@ -17,21 +17,30 @@ class.
 Downloads and requirements
 ==========================
 
-To download the software, please go to https://github.com/hasan3e8/AlphaDAWG.
+First clone the repo using the following command
+
+        git clone https://github.com/hasan3e8/AlphaDAWG
 
 We will need `python` and `R` and `matlab` for different parts of the
 project.
 
 For `python`, please install the following packages in a `conda`
 environment, `pandas`, `numpy`,`scipy`, `skimage`, `argparse`, `keras`
-and all relevant dependencies.
+and all relevant dependencies. Install these packages with this commad
+
+        pip install pandas numpy scipy skimage argparse keras
 
 For `R` the required package, `wavelsim`, which we will use for the
-wavelet transform of the data.
+wavelet transform of the data. This can be installed as
+
+        install.packages('wavelsim')  
 
 For `matlab`, we will use the
 [Curvelab](https://github.com/phcerdan/CurveLab) package for curvelet
-transform.
+transform. Clone this repo with
+
+        git clone https://github.com/phcerdan/CurveLab
+
 
 Data Preprocessing: Simulated and Empirical
 ===========================================
