@@ -51,7 +51,7 @@ demonstate how to make $\alpha$-DAWG works on empirical data, we have
 included data for one chromosome (chr22) in `.vcf` format from the CEU
 population in the `./Data/VCF` folder.
 
-in `./Data/MS_files_train` and `./Data/MS_files_test` folder, the files
+In `./Data/MS_files_train` and `./Data/MS_files_test` folder, the files
 are names as `neut_1.ms`, `neut_2.ms` and so on for neutrals and
 similarly `sweep_1.ms` and so on for sweeps.
 
