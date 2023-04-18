@@ -15,6 +15,9 @@ from skimage import data
 from skimage.transform import resize
 import argparse
 
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+
 parser = argparse.ArgumentParser(description= 'Preprocess .ms files')
 parser.add_argument('number', type=int, help= 'Number of .csv files of the chosen class')
 parser.add_argument('class_type',type=int, help= '1 for processing sweep training files, 0 for processing neutral training files')

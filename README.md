@@ -28,12 +28,20 @@ For `python`, please install the following packages in a `conda`
 environment, `pandas`, `numpy`,`scipy`, `skimage`, `argparse`, `keras`
 and all relevant dependencies. Install these packages with this commad
 
-        pip install pandas numpy scipy skimage argparse keras
+        pip install pandas numpy scipy scikit-image argparse keras
 
 For `R` the required package, `wavelsim`, which we will use for the
-wavelet transform of the data. This can be installed as
+wavelet transform of the data. To install this, first initiate R with
+        
+        R
 
-        install.packages('wavelsim')  
+in the command line. Then use
+
+        install.packages('waveslim')
+
+before quitting with
+
+        q()
 
 For `matlab`, we will use the
 [Curvelab](https://github.com/phcerdan/CurveLab) package for curvelet
@@ -87,7 +95,7 @@ transform, run the following `R` command
 
         Rscript Transform_Wavelet.R <wavalet level> <number of samples> <sweep or neutral> <train or test>
 
-Wavelet level can not be higher that five, sicce our matrices are
+Wavelet level can not be higher that five, since our matrices are
 $64\times 64$. For example,
 
         Rscript Transform_Wavelet.R 1 100 1 1
@@ -104,13 +112,15 @@ is the only folder we will use. You will also need to copy the included
 `Transform_curvelet.m` in the new imported `fdct_wrapping_matlab`
 folder.
 
-Now, open Matlab from terminal at the `.\fdct_wrapping_matlab`
-directory. For example, in macOS typing,
+Now, open Matlab from terminal. For this you will need to provide the full path to your Matlab installation directory. For example, in macOS typing,
 
         /Applications/MATLAB_R2022b.app/bin/matlab  -nodesktop
 
-should open Matlab. Now the following command should perform the
-curvelet transform,
+should open Matlab. Now change the working directory of Matlab to ./fdct_wrapping_matlab` by
+    
+        cd ./fdct_wrapping_matlab
+
+Now the following command should perform the curvelet transform,
 
         Transform_Curvelet(<number of samples>), <sweep or neutral>, <test or train>)
 
