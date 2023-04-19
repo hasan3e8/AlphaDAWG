@@ -63,7 +63,7 @@ In `./Data/MS_files_train` and `./Data/MS_files_test` folder, the files
 are names as `neut_1.ms`, `neut_2.ms` and so on for neutrals and
 similarly `sweep_1.ms` and so on for sweeps.
 
-To preprocess the `.ms` files, first change the working directory of Matlab to ./AlphaADWG` by
+To preprocess the `.ms` files, first change the working directory to ./AlphaADWG` by
 
         cd ./AlphaDAWG
         
