@@ -21,7 +21,7 @@ First clone the repo using the following command
 
         git clone https://github.com/hasan3e8/AlphaDAWG
 
-We will need `python` and `R` and `matlab` for different parts of the
+We will need `python` and `R` and `matlab` installed for different parts of the
 project.
 
 For `python`, please install the following packages in a `conda`
@@ -63,7 +63,11 @@ In `./Data/MS_files_train` and `./Data/MS_files_test` folder, the files
 are names as `neut_1.ms`, `neut_2.ms` and so on for neutrals and
 similarly `sweep_1.ms` and so on for sweeps.
 
-To preprocess the `.ms` files, use the following format form of command
+To preprocess the `.ms` files, first change the working directory of Matlab to ./AlphaADWG` by
+
+        cd ./AlphaDAWG
+        
+Then use the following format form of command
 
         python3 MS_CSV.py <number of samples> <sweep or neutral> <train or test>
 
@@ -140,9 +144,13 @@ process `.vcf` files. A sample file `CEU22.vcf` has been included in
 First, to convert the `.vcf` to `.ms` file, please use the following
 
         python3 VCF_MS.py <File name (without the .vcf suffix)>
+        
+For example,
 
-This will create the necessary amount of `.ms` files, they will be
-stored in `./Data/VCF/MS_files`. To convert these `.ms` files to `.csv`
+        python3 VCF_MS.py CEU22
+
+`CEU22.vcf` is provided in the package as an example. This will create the necessary amount of `.ms` files,
+ they will be stored in `./Data/VCF/MS_files`. To convert these `.ms` files to `.csv`
 files, please do the following
 
         python3 VCF_MS_CSV.py <number of samples>
