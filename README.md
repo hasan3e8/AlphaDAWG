@@ -2,7 +2,7 @@ Introduction
 ============
 
 $\alpha$-DAWG is a framework to distinguish signs of selective sweep
-from genetic data. We use $\alpha$-molecule transformation, such as
+from genomic data. We use $\alpha$-molecule transformation, such as
 wavelets, curvelets or a combination of both to extract information from
 the data to facilitate classification using machine learning. This
 software package can be used for applying $\alpha$-DAWG to classify any
@@ -203,5 +203,5 @@ For example,
 
 This will estimate probabilties of sweep for both simulated data and empirical data. For wavelet level please use the wavelet level you
 have already used for wavelet transform. The resulting probabilities from the model will be stored in `Probabilities of samples in simulated data.csv` for simulated
-data and `Probabilities of samples in <chromosome>.csv` for emipirical
+data and `Probabilities of samples in <chromosome>.csv` for empirical
 data.
