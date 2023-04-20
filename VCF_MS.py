@@ -50,7 +50,7 @@ while w[k]+1100000<w[-1]:
     if len(U)>=550:
         M.append(U)
         P.append(w[k])
-        print(i,len(U))
+        #print(i,len(U))
         i+=1
     m = min(j for j in w if j > w[k]+10000)
     k=p=list(np.where(w==m))[0][0]
@@ -78,6 +78,7 @@ np.shape(P)
 
 
 for i in range(len(M)):
+    print("Writing empirical sample", i+1)
     B=[]
     for j in range(len(AA)):
         H=list(AA[j]);
@@ -86,6 +87,7 @@ for i in range(len(M)):
         C= ''.join(A)
         C+='\n'
         B.append(C)
+
     with open('./Data/VCF/MS_files/output_'+str(i)+'.ms','w') as f:
         f.write(lines1[0])
         f.write(lines1[1])

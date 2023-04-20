@@ -111,9 +111,9 @@ obvious convention.
 
 For curvelet transform we use the Curvelab package in `Matlab`. Please
 [Download Curvelab](https://github.com/phcerdan/CurveLab) and copy
-*only* the `fdct_wrapping_matlab` folder in the parent directory, this
+*only* the `fdct_wrapping_matlab` folder in the parent directory (`AlphaDAWG` folder), this
 is the only folder we will use. You will also need to copy the included
-`Transform_curvelet.m` in the new imported `fdct_wrapping_matlab`
+`Transform_curvelet.m` inside the newly imported `fdct_wrapping_matlab`
 folder.
 
 Now, open Matlab from terminal. For this you will need to provide the full path to your Matlab installation directory. For example, in macOS typing,
@@ -166,6 +166,10 @@ These are saved in `./Data/CSV_files`, with names `output_1.csv`,
 To wavelet transform them, use
 
         Rscript EMP_Transform_Wavelet.R <wavelet level> <number of samples>
+        
+For chromosome 22, it will be (note that this chromosome generate 1998 samples),
+
+        Rscript EMP_Transform_Wavelet.R 1 1998
 
 the output will be a single matrix with \<number of samples\> of rows,
 named `EMP_Wavelets_.csv` in `./Data`.
@@ -177,18 +181,27 @@ run
 
         EMP_Transform_Curvelet(<number of samples>)
 
+For instance,
+
+        EMP_Transform_Curvelet(1998)
+
 This will make a matrix with \<number of samples\> number of rows in
-`./Data`.
+`./Data`. Don't forget to exit matlab with
+
+        exit
 
 Model Testing
 =============
 
-To run the madel, on a `python` environment, use the following command
+To run the model, on a `python` environment, use the following command
 
         python3 alpha_DAWG.py <wavelet level> <chromosome number>
+        
+For example,
 
-For wavelet level please use the wavelet level you have already used for
-wavelet transform. The resulting probabilities from the model will be
-stored in `Probabilities of samples in simulated data.csv` for simulated
+        python3 alpha_DAWG.py 1 22
+
+This will estimate probabilties of sweep for both simulated data and empirical data. For wavelet level please use the wavelet level you
+have already used for wavelet transform. The resulting probabilities from the model will be stored in `Probabilities of samples in simulated data.csv` for simulated
 data and `Probabilities of samples in <chromosome>.csv` for emipirical
 data.
