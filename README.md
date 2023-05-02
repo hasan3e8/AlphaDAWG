@@ -48,6 +48,8 @@ For `matlab`, we will use the
 transform. Clone this repo with
 
         git clone https://github.com/phcerdan/CurveLab
+        
+We have tested this software (Matlab_R2022b) on MacOS, but Matlab have their versions for other OSs.
 
 
 Data Preprocessing: Simulated and Empirical
@@ -109,9 +111,8 @@ will transform the 100 sweep test samples (output from
 `Wavelets_sweep_test_.csv` in `./Data`. Other names will follow the same
 obvious convention.
 
-For curvelet transform we use the Curvelab package in `Matlab`. Please
-[Download Curvelab](https://github.com/phcerdan/CurveLab) and copy
-*only* the `fdct_wrapping_matlab` folder in the parent directory (`AlphaDAWG` folder), this
+For curvelet transform we use the Curvelab package in `Matlab` that we downloaded. Please copy the `fdct_wrapping_matlab` folder in the 
+parent directory (`AlphaDAWG` folder), this
 is the only folder we will use. You will also need to copy the included
 `Transform_curvelet.m` inside the newly imported `fdct_wrapping_matlab`
 folder.
