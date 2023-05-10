@@ -6,7 +6,7 @@ from genomic data. We use $\alpha$-molecule transformation, such as
 wavelets, curvelets or a combination of both to extract information from
 the data to facilitate classification using machine learning. This
 software package can be used for applying $\alpha$-DAWG to classify any
-genetic regions into sweeps and neutrals, i.e, regions showing signs of
+genetic regions into sweep and neutral replicates, i.e, regions showing signs of
 selective sweep and region without them. We will show how to process
 data in `.ms` or `.vcf` format and make to suitable for the model. 100
 samples of each class for both training and testing have been provided
@@ -49,7 +49,7 @@ transform. Clone this repo with
 
         git clone https://github.com/phcerdan/CurveLab
         
-We have tested this software (Matlab_R2022b) on MacOS, but Matlab have their versions for other OSs.
+We have tested this software (Matlab_R2022b) on MacOS, but Matlab have their versions for Windows OS.
 
 
 Data Preprocessing: Simulated and Empirical
@@ -62,8 +62,8 @@ included data for one chromosome (chr22) in `.vcf` format from the CEU
 population in the `./Data/VCF` folder.
 
 In `./Data/MS_files_train` and `./Data/MS_files_test` folder, the files
-are names as `neut_1.ms`, `neut_2.ms` and so on for neutrals and
-similarly `sweep_1.ms` and so on for sweeps.
+are names as `neut_1.ms`, `neut_2.ms` and so on for neutral samples and
+similarly `sweep_1.ms` and so on for sweep samples.
 
 To preprocess the `.ms` files, first change the working directory to ./AlphaDAWG` by
 
@@ -73,7 +73,7 @@ Then use the following format form of command
 
         python3 MS_CSV.py <number of samples> <sweep or neutral> <train or test>
 
-Use 1 for sweep sample and 0 for neutrals. And use 1 for test samples
+Use 1 for sweep sample and 0 for neutral sample. And use 1 for test samples
 and 0 for train samples. For example,
 
         python3 MS_CSV.py 100 1 1
@@ -87,7 +87,7 @@ same shape. For this use the following command,
 
         python3 Parsing_CSVs.py <number of samples> <sweep or neutral> <train or test>
 
-Like before use 1 for sweep sample and 0 for neutrals, and use 1 for
+Like before use 1 for sweep and 0 for neutral samples, and use 1 for
 test samples and 0 for train samples. As an example
 
         python3 Parsing_CSVs.py 100 1 1
